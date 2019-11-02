@@ -8,32 +8,52 @@
 
 import SwiftUI
 
-extension Image: Identifiable {
-    public var id: UUID {
-        UUID()
-    }
-}
 
 struct InfinityScrollView: View {
-    @State var images = [
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
-        Image("prop"),
+    @State var currentPage = 0;
+    @State var items = [
+        ScrollViewItem(),
+        ScrollViewItem(),
+        ScrollViewItem(),
+        ScrollViewItem(),
+        ScrollViewItem(),
+        ScrollViewItem(),
     ]
     var messages = ["hoge", "baz", "Aaa"]
     var body: some View {
-        ScrollView(.horizontal, content: {
-            HStack(spacing: 0) {
-                ForEach(self.images){ image in
-                    image
+        VStack {
+            Text("Page \(currentPage)")
+            GeometryReader { geometry in
+                ScrollView(.horizontal, content: {
+                    HStack(spacing: 0) {
+                        ForEach(self.items){ item in
+                            item.frame(width: geometry.size.width)
+                        }
+                    }
+                })
+
+            }
+        }
+    }
+}
+
+
+
+struct ScrollViewItem: View, Identifiable {
+    public var id = UUID()
+    @State var isCurrentPage = false
+    @State var currentX = 0
+    
+    var body: some View {
+        ZStack(alignment: .center){
+            Image("prop")
+            GeometryReader { geometry in
+                VStack {
+                    Text("\(geometry.frame(in: CoordinateSpace.global).origin.x)")
+                    Circle().fill(Color.blue).frame(width: 10, height: 10)
                 }
             }
-        })
+        }
     }
 }
 
