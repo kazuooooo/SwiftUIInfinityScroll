@@ -11,19 +11,33 @@ import SwiftUI
 class ScrollViewData: ObservableObject {
     @Published var items = [
         ScrollViewItem(idx: 1),
-        ScrollViewItem(idx: 2),
-        ScrollViewItem(idx: 3),
-        ScrollViewItem(idx: 4),
-        ScrollViewItem(idx: 5),
-        ScrollViewItem(idx: 6),
     ]
     
+    var initializedItems: [Int] = []
+    var firstIdx: Int = 0
+    // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
+    //       再度renderされる
     func onAppear(idx: Int){
         print("onAppear \(idx)")
-        if(idx == items.count) {
-            print("create \(items.count + 1)")
-            let newItem = ScrollViewItem(idx: items.count + 1)
+        //        if(!initializedItems.contains(idx)) {
+        //            print("initialized \(idx)")
+        //            initializedItems.append(idx)
+        //            return
+        //        }
+        if(idx == items.last?.idx) {
+            guard let lastIdx = items.last?.idx else {
+                print("no idx something wrong")
+                return
+            }
+            let newItem = ScrollViewItem(idx: lastIdx + 1)
             items.append(newItem)
+        }
+    }
+    
+    func onDisappear(idx: Int){
+        if(idx == items.first?.idx){
+            print("remove \(idx)")
+            items.remove(at: 0)
         }
     }
 }
@@ -31,17 +45,20 @@ class ScrollViewData: ObservableObject {
 struct InfinityScrollView: View {
     @ObservedObject var scrollViewData = ScrollViewData()
     var body: some View {
-        VStack {
-            List(scrollViewData.items) { item in
-                item
-                .onAppear(){
-                    self.scrollViewData.onAppear(idx: item.idx)
-                }
-                .onDisappear{
-//                    print("disappeard \(item.idx)")
+        GeometryReader { geometry in
+            VStack {
+                List(self.scrollViewData.items) { item in
+                    item
+                    .onAppear(){
+                        self.scrollViewData.onAppear(idx: item.idx)
+                    }
+                    .onDisappear{
+                        self.scrollViewData.onDisappear(idx: item.idx)
+                    }.frame(height: geometry.size.height)
                 }
             }
         }
+        
     }
 }
 
@@ -53,7 +70,10 @@ struct ScrollViewItem: View, Identifiable {
     @State var currentX = 0
     public var idx: Int;
     var body: some View {
-        return Image("prop")
+        return HStack{
+            Text("\(idx)")
+            Image("prop")
+        }
     }
 }
 
