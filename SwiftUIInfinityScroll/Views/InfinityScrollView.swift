@@ -11,6 +11,8 @@ import SwiftUI
 class ScrollViewData: ObservableObject {
     @Published var items = [
         ScrollViewItem(idx: 1),
+        ScrollViewItem(idx: 2),
+        ScrollViewItem(idx: 3),
     ]
     
     var initializedItems: [Int] = []
@@ -18,27 +20,23 @@ class ScrollViewData: ObservableObject {
     // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
     //       再度renderされる
     func onAppear(idx: Int){
-        print("onAppear \(idx)")
-        //        if(!initializedItems.contains(idx)) {
-        //            print("initialized \(idx)")
-        //            initializedItems.append(idx)
-        //            return
-        //        }
-        if(idx == items.last?.idx) {
-            guard let lastIdx = items.last?.idx else {
-                print("no idx something wrong")
-                return
-            }
+        guard let lastIdx = items.last?.idx else {
+            print("no idx something wrong")
+            return
+        }
+        // 順方向の生成
+        // N - 1番目の要素がappearしたらN + 1番目を生成する
+        if(idx == lastIdx - 1) {
             let newItem = ScrollViewItem(idx: lastIdx + 1)
             items.append(newItem)
         }
     }
     
     func onDisappear(idx: Int){
-        if(idx == items.first?.idx){
-            print("remove \(idx)")
-            items.remove(at: 0)
-        }
+        // 順方向の削除
+        // N番目の要素がdisappearしたらN - 1番目の要素を削除する
+//        print("onDisappear \(idx)")
+//        items = items.filter { $0.idx != idx - 1}
     }
 }
 
@@ -50,9 +48,12 @@ struct InfinityScrollView: View {
                 List(self.scrollViewData.items) { item in
                     item
                     .onAppear(){
+                        print("onAppear \(item.idx)")
+
                         self.scrollViewData.onAppear(idx: item.idx)
                     }
                     .onDisappear{
+                        print("onDisappear \(item.idx)")
                         self.scrollViewData.onDisappear(idx: item.idx)
                     }.frame(height: geometry.size.height)
                 }
