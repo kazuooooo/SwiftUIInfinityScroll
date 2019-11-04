@@ -17,7 +17,6 @@
 		B9B6FC8E236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC8D236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift */; };
 		B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */; };
 		B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */; };
-		B9B6FCA4236C8F3B00D5EB22 /* prop.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B6FCA3236C8F3B00D5EB22 /* prop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		B9B6FC8F236C860500D5EB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollView.swift; sourceTree = "<group>"; };
 		B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewModel.swift; sourceTree = "<group>"; };
-		B9B6FCA3236C8F3B00D5EB22 /* prop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prop.png; path = ../../../../Downloads/prop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +170,6 @@
 		B9B6FCA2236C8F2B00D5EB22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B9B6FCA3236C8F3B00D5EB22 /* prop.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -281,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B6FCA4236C8F3B00D5EB22 /* prop.png in Resources */,
 				B9B6FC78236C860500D5EB22 /* LaunchScreen.storyboard in Resources */,
 				B9B6FC75236C860500D5EB22 /* Preview Assets.xcassets in Resources */,
 				B9B6FC72236C860500D5EB22 /* Assets.xcassets in Resources */,

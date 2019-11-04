@@ -8,37 +8,60 @@
 
 import SwiftUI
 
-class ScrollViewData: ObservableObject {
-    @Published var items = [
-        ScrollViewItem(idx: 1),
-        ScrollViewItem(idx: 2),
-        ScrollViewItem(idx: 3),
-    ]
-    
-    var initializedItems: [Int] = []
-    var firstIdx: Int = 0
-    // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
-    //       再度renderされる
-    func onAppear(idx: Int){
-        guard let lastIdx = items.last?.idx else {
-            print("no idx something wrong")
-            return
-        }
-        // 順方向の生成
-        // N - 1番目の要素がappearしたらN + 1番目を生成する
-        if(idx == lastIdx - 1) {
-            let newItem = ScrollViewItem(idx: lastIdx + 1)
-            items.append(newItem)
-        }
-    }
-    
-    func onDisappear(idx: Int){
-        // 順方向の削除
-        // N番目の要素がdisappearしたらN - 1番目の要素を削除する
-//        print("onDisappear \(idx)")
-//        items = items.filter { $0.idx != idx - 1}
+protocol ItemGenerator {
+    associatedtype Item
+    static func generateItem(page: Int) -> Item
+}
+
+
+// Generator Example
+class PropGenerator: ItemGenerator {
+    typealias Item = ScrollViewItem
+    static func generateItem(page: Int) -> ScrollViewItem {
+        return ScrollViewItem(page: page)
     }
 }
+
+// ViewModel
+class ScrollViewData: ObservableObject {
+    @Published var items = [
+        ScrollViewItem(page: 0)
+    ]
+    
+    var lastPage: Int { items.count - 1 }
+    
+    // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
+    //       再度renderされる
+    func onAppear(page: Int){
+        // Initialize
+        if(isOnInitialize(appearedPage: page)) {
+            items.append(PropGenerator.generateItem(page: 1))
+            items.append(PropGenerator.generateItem(page: 2))
+        }
+        
+        if(needToAppendItem(appearedPage: page)) {
+            print("create page \(lastPage + 1)")
+            items.append(PropGenerator.generateItem(page: lastPage + 1))
+        }
+    }
+    
+    private func isOnInitialize(appearedPage page: Int) -> Bool { page == 0 && items.count == 1 }
+    private func needToAppendItem(appearedPage page: Int) -> Bool {
+        page == lastPage - 1
+    }
+}
+
+struct ScrollViewItem: View, Identifiable {
+    public var id = UUID()
+    public var page: Int
+    var body: some View {
+        return HStack{
+            Image("man_55")
+            Text("\(page)")
+        }
+    }
+}
+
 
 struct InfinityScrollView: View {
     @ObservedObject var scrollViewData = ScrollViewData()
@@ -48,13 +71,8 @@ struct InfinityScrollView: View {
                 List(self.scrollViewData.items) { item in
                     item
                     .onAppear(){
-                        print("onAppear \(item.idx)")
-
-                        self.scrollViewData.onAppear(idx: item.idx)
-                    }
-                    .onDisappear{
-                        print("onDisappear \(item.idx)")
-                        self.scrollViewData.onDisappear(idx: item.idx)
+                        print("onAppear \(item.page)")
+                        self.scrollViewData.onAppear(page: item.page)
                     }.frame(height: geometry.size.height)
                 }
             }
@@ -62,22 +80,6 @@ struct InfinityScrollView: View {
         
     }
 }
-
-
-
-struct ScrollViewItem: View, Identifiable {
-    public var id = UUID()
-    @State var isCurrentPage = false
-    @State var currentX = 0
-    public var idx: Int;
-    var body: some View {
-        return HStack{
-            Text("\(idx)")
-            Image("prop")
-        }
-    }
-}
-
 struct InfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
         InfinityScrollView()
