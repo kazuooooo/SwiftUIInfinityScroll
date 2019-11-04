@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4EDA4E68-9DDC-4B20-98BE-D5B8105C3AEB"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0962B83-C711-4B2B-814A-08D411776A4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "onAppear(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0962B83-C711-4B2B-814A-08D411776A4B - c96dc0c837a121f4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIInfinityScroll.ScrollViewItem.body.getter : some"
+                  moduleName = "SwiftUIInfinityScroll"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsumotokazuya/.ghq/github.com/kazuooooo/SwiftUIInfinityScroll/SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "F0962B83-C711-4B2B-814A-08D411776A4B - 59388a327742418d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in SwiftUIInfinityScroll_PreviewReplacement_InfinityScrollView_6):SwiftUIInfinityScroll.ScrollViewData.(__preview__onAppear in _795DF9CEAEDCECFB89D572705CBD4B57)(page: Swift.Int) -&gt; ()"
+                  moduleName = "InfinityScrollView.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsumotokazuya/.ghq/github.com/kazuooooo/SwiftUIInfinityScroll/SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "3411">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA1FEF81-0401-4B35-8EB2-338B91115DE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "onAppear(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA1FEF81-0401-4B35-8EB2-338B91115DE9 - 672e8ec7de96195a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text)&gt; in SwiftUIInfinityScroll.ScrollViewItem.body.getter : some"
+                  moduleName = "SwiftUIInfinityScroll"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsumotokazuya/.ghq/github.com/kazuooooo/SwiftUIInfinityScroll/SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "CA1FEF81-0401-4B35-8EB2-338B91115DE9 - e3cbae30bc3e5feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in SwiftUIInfinityScroll_PreviewReplacement_InfinityScrollView_6):SwiftUIInfinityScroll.ScrollViewData.(__preview__isOnInitialize in _795DF9CEAEDCECFB89D572705CBD4B57)(appearedPage: Swift.Int) -&gt; Swift.Bool"
+                  moduleName = "InfinityScrollView.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsumotokazuya/.ghq/github.com/kazuooooo/SwiftUIInfinityScroll/SwiftUIInfinityScroll/Views/InfinityScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

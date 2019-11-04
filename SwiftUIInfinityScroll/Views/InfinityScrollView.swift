@@ -28,27 +28,42 @@ class ScrollViewData: ObservableObject {
         ScrollViewItem(page: 0)
     ]
     
-    var lastPage: Int { items.count - 1 }
+    var lastPage: Int { items.last?.page ?? 0 }
+    var firstPage: Int { items.first?.page ?? 0 }
     
     // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
     //       再度renderされる
     func onAppear(page: Int){
         // Initialize
         if(isOnInitialize(appearedPage: page)) {
-            items.append(PropGenerator.generateItem(page: 1))
-            items.append(PropGenerator.generateItem(page: 2))
+            items.insert(PropGenerator.generateItem(page: -1), at: 0)
+            items.insert(PropGenerator.generateItem(page: -2), at: 0)
+//            items.append(PropGenerator.generateItem(page: 1))
+//            items.append(PropGenerator.generateItem(page: 2))
+            return
         }
         
-        if(needToAppendItem(appearedPage: page)) {
-            print("create page \(lastPage + 1)")
-            items.append(PropGenerator.generateItem(page: lastPage + 1))
-        }
+        // Forward pages
+//        if(page == lastPage - 1) {
+//            print("create page \(lastPage + 1)")
+//            items.append(PropGenerator.generateItem(page: lastPage + 1))
+//        }
+//
+        // Backword pages
+//        print(firstPage)
+        let debugFirstPage = firstPage
+        print("firstPage: \(debugFirstPage)")
+        print("page: \(page)")
+        print("firstPage + 1: \(firstPage + 1)")
+        print("result: \(page == firstPage + 1)")
+
+//        if(page == firstPage + 1) {
+//            print("unshift page: \(page)")
+//            items.insert(PropGenerator.generateItem(page: firstPage - 1), at: 0)
+//        }
     }
     
     private func isOnInitialize(appearedPage page: Int) -> Bool { page == 0 && items.count == 1 }
-    private func needToAppendItem(appearedPage page: Int) -> Bool {
-        page == lastPage - 1
-    }
 }
 
 struct ScrollViewItem: View, Identifiable {
@@ -67,6 +82,7 @@ struct InfinityScrollView: View {
     @ObservedObject var scrollViewData = ScrollViewData()
     var body: some View {
         GeometryReader { geometry in
+            
             VStack {
                 List(self.scrollViewData.items) { item in
                     item
