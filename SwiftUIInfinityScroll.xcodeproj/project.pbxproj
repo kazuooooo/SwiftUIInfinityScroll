@@ -17,6 +17,9 @@
 		B9B6FC8E236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC8D236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift */; };
 		B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */; };
 		B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */; };
+		B9FB90E323718C7F0001CB80 /* InfinityScrollViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E223718C7F0001CB80 /* InfinityScrollViewData.swift */; };
+		B9FB90E523718CE00001CB80 /* ItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E423718CE00001CB80 /* ItemGenerator.swift */; };
+		B9FB90E823718D750001CB80 /* PropGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E723718D750001CB80 /* PropGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		B9B6FC8F236C860500D5EB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollView.swift; sourceTree = "<group>"; };
 		B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewModel.swift; sourceTree = "<group>"; };
+		B9FB90E223718C7F0001CB80 /* InfinityScrollViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewData.swift; sourceTree = "<group>"; };
+		B9FB90E423718CE00001CB80 /* ItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGenerator.swift; sourceTree = "<group>"; };
+		B9FB90E723718D750001CB80 /* PropGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		B9B6FC6A236C860400D5EB22 /* SwiftUIInfinityScroll */ = {
 			isa = PBXGroup;
 			children = (
+				B9FB90E623718D640001CB80 /* Sample */,
 				B9B6FCA2236C8F2B00D5EB22 /* Resources */,
 				B9B6FC9D236C8BDE00D5EB22 /* ViewModels */,
 				B9B6FC9C236C8BD700D5EB22 /* Models */,
@@ -156,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */,
+				B9FB90E423718CE00001CB80 /* ItemGenerator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 		B9B6FC9D236C8BDE00D5EB22 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B9FB90E223718C7F0001CB80 /* InfinityScrollViewData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +181,14 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9FB90E623718D640001CB80 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				B9FB90E723718D750001CB80 /* PropGenerator.swift */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B6FC6C236C860400D5EB22 /* AppDelegate.swift in Sources */,
+				B9FB90E523718CE00001CB80 /* ItemGenerator.swift in Sources */,
 				B9B6FC6E236C860400D5EB22 /* SceneDelegate.swift in Sources */,
 				B9B6FC70236C860400D5EB22 /* ContentView.swift in Sources */,
 				B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */,
 				B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */,
+				B9FB90E823718D750001CB80 /* PropGenerator.swift in Sources */,
+				B9FB90E323718C7F0001CB80 /* InfinityScrollViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
