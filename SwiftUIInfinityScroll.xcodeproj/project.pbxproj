@@ -17,6 +17,7 @@
 		B9B6FC8E236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC8D236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift */; };
 		B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */; };
 		B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */; };
+		B9F6B144237074270022CF80 /* hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F6B143237074270022CF80 /* hoge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B9B6FC8F236C860500D5EB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollView.swift; sourceTree = "<group>"; };
 		B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewModel.swift; sourceTree = "<group>"; };
+		B9F6B143237074270022CF80 /* hoge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */,
+				B9F6B143237074270022CF80 /* hoge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				B9B6FC6E236C860400D5EB22 /* SceneDelegate.swift in Sources */,
 				B9B6FC70236C860400D5EB22 /* ContentView.swift in Sources */,
 				B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */,
+				B9F6B144237074270022CF80 /* hoge.swift in Sources */,
 				B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

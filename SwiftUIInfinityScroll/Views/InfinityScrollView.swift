@@ -57,10 +57,10 @@ class ScrollViewData: ObservableObject {
         print("firstPage + 1: \(firstPage + 1)")
         print("result: \(page == firstPage + 1)")
 
-//        if(page == firstPage + 1) {
-//            print("unshift page: \(page)")
+        if(page == firstPage + 1) {
+            print("unshift page: \(page)")
 //            items.insert(PropGenerator.generateItem(page: firstPage - 1), at: 0)
-//        }
+        }
     }
     
     private func isOnInitialize(appearedPage page: Int) -> Bool { page == 0 && items.count == 1 }
@@ -72,6 +72,7 @@ struct ScrollViewItem: View, Identifiable {
     var body: some View {
         return HStack{
             Image("man_55")
+                .padding(.top)
             Text("\(page)")
         }
     }
@@ -82,16 +83,19 @@ struct InfinityScrollView: View {
     @ObservedObject var scrollViewData = ScrollViewData()
     var body: some View {
         GeometryReader { geometry in
-            
-            VStack {
-                List(self.scrollViewData.items) { item in
-                    item
-                    .onAppear(){
-                        print("onAppear \(item.page)")
-                        self.scrollViewData.onAppear(page: item.page)
-                    }.frame(height: geometry.size.height)
+            ScrollView(.horizontal){
+                HStack {
+                     ForEach(self.scrollViewData.items) { item in
+                         item
+                         .onAppear(){
+                             print("onAppear \(item.page)")
+                             self.scrollViewData.onAppear(page: item.page)
+                         }
+                         .frame(width: geometry.size.width, height: geometry.size.height)
+                     }
                 }
             }
+            .border(Color.red, width: 2)
         }
         
     }
