@@ -9,16 +9,14 @@
 import SwiftUI
 
 // Generator Example
-class PropGenerator: ItemGenerator {
-    typealias Item = ScrollViewItem
-    static func generateItem(page: Int) -> ScrollViewItem {
-        return ScrollViewItem(page: page)
+class PropGenerator: ItemGeneratable {
+    typealias Item = PropViewItem
+    func generateItem(page: Int) -> PropViewItem {
+        return PropViewItem(page: page)
     }
 }
 
-
-
-struct ScrollViewItem: View, Identifiable {
+struct PropViewItem: InfinityScrollViewItemable {
     public var id = UUID()
     public var page: Int
     var body: some View {
@@ -28,3 +26,5 @@ struct ScrollViewItem: View, Identifiable {
         }
     }
 }
+
+

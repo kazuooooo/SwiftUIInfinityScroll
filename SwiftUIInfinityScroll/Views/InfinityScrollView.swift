@@ -8,8 +8,11 @@
 
 import SwiftUI
 
-struct InfinityScrollView: View {
-    @ObservedObject var scrollViewData = InfinityScrollViewData()
+struct InfinityScrollView<G: ItemGeneratable>: View {
+    @ObservedObject var scrollViewData: InfinityScrollViewData<G>
+    init(generator: G) {
+        self.scrollViewData = InfinityScrollViewData<G>(generator: generator)
+    }
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -26,6 +29,6 @@ struct InfinityScrollView: View {
 }
 struct InfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        InfinityScrollView()
+        InfinityScrollView<PropGenerator>(generator: PropGenerator())
     }
 }

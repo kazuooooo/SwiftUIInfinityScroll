@@ -7,26 +7,31 @@
 //
 
 import Foundation
+import SwiftUI
 
-class InfinityScrollViewData: ObservableObject {
-    @Published var items = [
-        ScrollViewItem(page: 0)
-    ]
-    
+class InfinityScrollViewData<G: ItemGeneratable> : ObservableObject {
+    @Published var items: [G.Item]
+        
     var lastPage: Int { items.count - 1 }
+    var generator: G
+    
+    init(generator: G){
+        self.generator = generator
+        self.items = [generator.generateItem(page: 0)]
+    }
     
     // NOTE: 画面外は2画面分しか保持していないのでそれ以上は
     //       再度renderされる
     func onAppear(page: Int){
         // Initialize
         if(isOnInitialize(appearedPage: page)) {
-            items.append(PropGenerator.generateItem(page: 1))
-            items.append(PropGenerator.generateItem(page: 2))
+            items.append(generator.generateItem(page: 1))
+            items.append(generator.generateItem(page: 2))
         }
         
         if(needToAppendItem(appearedPage: page)) {
             print("create page \(lastPage + 1)")
-            items.append(PropGenerator.generateItem(page: lastPage + 1))
+            items.append(generator.generateItem(page: lastPage + 1))
         }
     }
     

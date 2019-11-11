@@ -6,9 +6,13 @@
 //  Copyright © 2019 松本和也. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
-protocol ItemGenerator {
-    associatedtype Item
-    static func generateItem(page: Int) -> Item
+protocol ItemGeneratable {
+    associatedtype Item: InfinityScrollViewItemable
+    func generateItem(page: Int) -> Item
+}
+
+protocol InfinityScrollViewItemable: View, Identifiable {
+    var page: Int { get }
 }
