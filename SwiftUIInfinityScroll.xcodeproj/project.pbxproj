@@ -16,7 +16,6 @@
 		B9B6FC83236C860500D5EB22 /* SwiftUIInfinityScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC82236C860500D5EB22 /* SwiftUIInfinityScrollTests.swift */; };
 		B9B6FC8E236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC8D236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift */; };
 		B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */; };
-		B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */; };
 		B9FB90E323718C7F0001CB80 /* InfinityScrollViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E223718C7F0001CB80 /* InfinityScrollViewData.swift */; };
 		B9FB90E523718CE00001CB80 /* ItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E423718CE00001CB80 /* ItemGenerator.swift */; };
 		B9FB90E823718D750001CB80 /* PropGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB90E723718D750001CB80 /* PropGenerator.swift */; };
@@ -55,7 +54,6 @@
 		B9B6FC8D236C860500D5EB22 /* SwiftUIInfinityScrollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInfinityScrollUITests.swift; sourceTree = "<group>"; };
 		B9B6FC8F236C860500D5EB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B6FC9E236C8BF400D5EB22 /* InfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollView.swift; sourceTree = "<group>"; };
-		B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewModel.swift; sourceTree = "<group>"; };
 		B9FB90E223718C7F0001CB80 /* InfinityScrollViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewData.swift; sourceTree = "<group>"; };
 		B9FB90E423718CE00001CB80 /* ItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGenerator.swift; sourceTree = "<group>"; };
 		B9FB90E723718D750001CB80 /* PropGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropGenerator.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		B9B6FC9C236C8BD700D5EB22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B9B6FCA0236C8C1300D5EB22 /* InfinityScrollViewModel.swift */,
 				B9FB90E423718CE00001CB80 /* ItemGenerator.swift */,
 			);
 			path = Models;
@@ -318,7 +315,6 @@
 				B9FB90E523718CE00001CB80 /* ItemGenerator.swift in Sources */,
 				B9B6FC6E236C860400D5EB22 /* SceneDelegate.swift in Sources */,
 				B9B6FC70236C860400D5EB22 /* ContentView.swift in Sources */,
-				B9B6FCA1236C8C1300D5EB22 /* InfinityScrollViewModel.swift in Sources */,
 				B9B6FC9F236C8BF400D5EB22 /* InfinityScrollView.swift in Sources */,
 				B9FB90E823718D750001CB80 /* PropGenerator.swift in Sources */,
 				B9FB90E323718C7F0001CB80 /* InfinityScrollViewData.swift in Sources */,

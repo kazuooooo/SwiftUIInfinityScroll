@@ -13,17 +13,52 @@ struct InfinityScrollView<G: ItemGeneratable>: View {
     init(generator: G) {
         self.scrollViewData = InfinityScrollViewData<G>(generator: generator)
     }
+    
+    func generateText(geometry: GeometryProxy) -> Text {
+        print("geometry", geometry.frame(in: .global))
+        return Text("hoge")
+    }
+    
+//  NOTE:
+//  ScrollViewでHStackを用いた場合
+//  画面上に表示 / 非表示に関わらずonAppearがコールされてしまうため
+//  onAppearをトリガーに無限スクロール実装ができない。
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                List(self.scrollViewData.items) { item in
-                    item
-                    .onAppear(){
-                        self.scrollViewData.onAppear(page: item.page)
-                    }.frame(height: geometry.size.height)
+            ScrollView(.horizontal, content: {
+                HStack {
+                    Group {
+                        GeometryReader { textGeometory in
+                            self.generateText(geometry: geometry)
+                        }
+                        ForEach(self.scrollViewData.items){ item in
+                            item
+                                //                                .onAppear(){
+                                //                                self.scrollViewData.onAppear(page: item.page)
+                                //                            }
+                                .frame(
+                                    width: geometry.size.width,
+                                    height: geometry.size.height)
+                                .onTapGesture {
+                                    print("item \(item.page)")
+                                self.scrollViewData.onAppear(page: item.page)
+                                }
+                        }
+                    }
                 }
-            }
+            })
         }
+        
+        //        GeometryReader { geometry in
+        //            VStack {
+        //                List(self.scrollViewData.items) { item in
+        //                    item
+        //                    .onAppear(){
+        //                        self.scrollViewData.onAppear(page: item.page)
+        //                    }.frame(height: geometry.size.height)
+        //                }
+        //            }
+        //        }
         
     }
 }
