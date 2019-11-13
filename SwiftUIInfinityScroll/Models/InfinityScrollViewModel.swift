@@ -30,7 +30,7 @@ class InfinityScrollViewData<G: ItemGeneratable> : ObservableObject {
         }
         
         if(needToAppendItem(appearedPage: page)) {
-            print("create page \(lastPage + 1)")
+            print("create \(lastPage + 1)")
             items.append(generator.generateItem(page: lastPage + 1))
         }
     }
