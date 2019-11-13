@@ -1,0 +1,21 @@
+PODS:
+  - SwiftUIInfinityScroll (0.1.0)
+
+DEPENDENCIES:
+  - SwiftUIInfinityScroll (from `https://github.com/kazuooooo/SwiftUIInfinityScroll`)
+
+EXTERNAL SOURCES:
+  SwiftUIInfinityScroll:
+    :git: https://github.com/kazuooooo/SwiftUIInfinityScroll
+
+CHECKOUT OPTIONS:
+  SwiftUIInfinityScroll:
+    :commit: ba2fe7e053ba21c266e74a10ad3313838691ae51
+    :git: https://github.com/kazuooooo/SwiftUIInfinityScroll
+
+SPEC CHECKSUMS:
+  SwiftUIInfinityScroll: 5518851d60cc1d8c22166d244c9d80b65e582220
+
+PODFILE CHECKSUM: ec1aba5cbb311f2f41fac039ffa1e9c60fc90a45
+
+COCOAPODS: 1.8.4
