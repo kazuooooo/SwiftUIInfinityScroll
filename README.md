@@ -82,20 +82,26 @@ struct DoraemonScrollView_Previews: PreviewProvider {
 }
 ```
 
-You can instantly check it on [Sample Project]()
+You can instantly check it on [Sample Project](https://github.com/kazuooooo/SwiftUIInfinityScroll/tree/master/SwiftUIInfinityaScrollSample)
 
 ## Versioning
 For the versions available, see the [tags on this repository](https://github.com/kazuooooo/SwiftUIInfinityScroll/tags). 
 
 ## Contributing
-Any contributions are Welcome :+1:	Don't hesitate!
+Any contributions are Welcome :+1:	
+
+Don't hesitate!
+
 Fork repo and create PR, please.
 
 ## Credits
 SwiftUIInfinityScroll was ispired by the following projects:
 [**WaterfallGrid**](https://github.com/paololeonardi/WaterfallGrid/blob/master/README.md)
+
 Especially how to compose directory structure and write this README.md :smile_cat:
 
 ## License
-SwiftUIInfinityScroll is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+SwiftUIInfinityScroll is available under the MIT license. 
+
+See the [LICENSE](LICENSE) file for more info.
 
