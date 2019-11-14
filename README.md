@@ -1,6 +1,15 @@
 ## SwiftUIInfinityScroll
 
-InfinityScroll view for SwiftUI
+InfinityScroll view for SwiftUI :tada:
+
+
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/f6c61f47-2a1c-3e77-2def-f14472ce1558.png">
+
+Vertical             |  Horizontal
+:-------------------------:|:-------------------------:
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/2e0dbdda-8dcd-3d70-f29e-f4ec48ba3c1f.gif" height="500">  |  <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/d7db4551-9e31-8961-0dc7-29454b303cce.gif" height="500">
+
+
 
 ## Features
 
