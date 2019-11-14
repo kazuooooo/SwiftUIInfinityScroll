@@ -4,7 +4,7 @@
 target 'SwiftUIInfinityaScrollSample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SwiftUIInfinityScroll', :git => 'https://github.com/kazuooooo/SwiftUIInfinityScroll'
+  pod 'SwiftUIInfinityScroll', '~> 0.0.1'
 
   # Pods for SwiftUIInfinityaScrollSample
 
