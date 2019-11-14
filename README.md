@@ -26,7 +26,7 @@ Many features aren’t implemented yet :bow:
 - [ ] Scroll per page by flick
 - [ ] Discard invisible page for performance.
 
-When ScrollView get more functions, I’m planning to these features :muscle:
+When ScrollView get more functions, I’m implementing these features :muscle:
 
 ## Requirements
 
