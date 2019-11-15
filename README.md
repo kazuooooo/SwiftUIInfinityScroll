@@ -19,7 +19,7 @@ Because of lack of Swift UI ScrollView functions,
 
 Many features aren’t implemented yet :bow:
 
-(more detail [here](todo add link))
+(more detail [here](https://medium.com/@matsumotokazuya/implement-infinite-scroll-with-swiftui-cc25d1459878))
 
 - [x] Vertical & horizontal infinity scroll
 - [ ] Minus page direction scroll

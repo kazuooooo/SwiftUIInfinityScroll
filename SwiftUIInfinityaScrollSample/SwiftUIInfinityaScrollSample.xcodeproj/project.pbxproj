@@ -27,6 +27,7 @@
 		B9127A47237C736E0024CABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9127A49237C736E0024CABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9127A4F237C74550024CABB /* DoraemonScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoraemonScrollView.swift; sourceTree = "<group>"; };
+		B9F542D52435DFDF00F0A1DC /* SwiftUIInfinityScroll */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIInfinityScroll; path = ..; sourceTree = "<group>"; };
 		C835DAA4C183F356A2800451 /* Pods-SwiftUIInfinityaScrollSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIInfinityaScrollSample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIInfinityaScrollSample/Pods-SwiftUIInfinityaScrollSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				5662B7021158BAFD8F88427F /* Pods_SwiftUIInfinityaScrollSample.framework */,
+				B9F542D52435DFDF00F0A1DC /* SwiftUIInfinityScroll */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
