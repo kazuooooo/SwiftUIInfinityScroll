@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 struct InfinityScrollView<G: ItemGeneratable> : View {
-    @ObservedObject var scrollState: InfinityScrollState
+    @EnvironmentObject var scrollState: InfinityScrollState
     
     var generator: G
     
@@ -25,17 +25,6 @@ struct InfinityScrollView<G: ItemGeneratable> : View {
                             self.generator.generateItem(page: page)
                         }
                     }
-                }
-                VStack {
-                    Text("position: \(self.scrollState.horizontalScroll!.position)")
-                    Text("page: \(self.scrollState.horizontalScroll!.page)")
-                    Text("pageInInfinity: \(scroll.pageInInfinity)")
-                    Text("renderPages: \(String(scroll.renderPages.first!))〜\(String(scroll.renderPages.last!))")
-                    Text("decrement: \(scroll.positionToDecrementPage)")
-                    Text("increment: \(scroll.positionToIncrementPage)")
-                    Text("unit: \(self.scrollState.horizontalScroll!.unit)")
-                    Text("positionInUnit: \(self.scrollState.horizontalScroll!.positionInUnit)")
-                    Text("contentSize: \(self.scrollState.horizontalScroll!.contentSize)")
                 }
         }
     }
@@ -74,8 +63,7 @@ struct InfinityScrollView_Previews: PreviewProvider {
             )
         )
         return InfinityScrollView(
-            scrollState: scrollState,
             generator: TestViewGenerator()
-        )
+        ).environmentObject(scrollState)
     }
 }

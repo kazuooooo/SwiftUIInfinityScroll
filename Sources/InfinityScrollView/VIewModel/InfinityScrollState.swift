@@ -10,4 +10,11 @@ import Foundation
 import SwiftUI
 
 internal class InfinityScrollState: ScrollState {
+    /// Dimentional
+    var infinityHorizontalScroll: InfinityScroll? {
+        self.horizontalScroll as? InfinityScroll
+    }
+    var infinityVerticalScroll: InfinityScroll? {
+        self.verticalScroll as? InfinityScroll
+    }
 }

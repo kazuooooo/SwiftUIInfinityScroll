@@ -22,6 +22,8 @@
 		B9EF98E52446CF6D0095A3AE /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98E02446CF6D0095A3AE /* Scroll.swift */; };
 		B9EF98E62446CF6D0095A3AE /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98E12446CF6D0095A3AE /* ScrollDetector.swift */; };
 		B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98E22446CF6D0095A3AE /* PositionScrollViewDelegate.swift */; };
+		B9F393FC2446D0B100A79013 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */; };
+		B9F393FE2446D55F00A79013 /* ScrollSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F393FD2446D55F00A79013 /* ScrollSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B9EF98E02446CF6D0095A3AE /* Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
 		B9EF98E12446CF6D0095A3AE /* ScrollDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
 		B9EF98E22446CF6D0095A3AE /* PositionScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionScrollViewDelegate.swift; sourceTree = "<group>"; };
+		B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		B9F393FD2446D55F00A79013 /* ScrollSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		B9EF98AD2446CDC70095A3AE /* SwiftUIInfinityScrollExample */ = {
 			isa = PBXGroup;
 			children = (
+				B9F393FA2446D09700A79013 /* Examples */,
 				B9EF98AE2446CDC70095A3AE /* AppDelegate.swift */,
 				B9EF98B02446CDC70095A3AE /* SceneDelegate.swift */,
 				B9EF98B22446CDC70095A3AE /* ContentView.swift */,
@@ -156,8 +161,17 @@
 				B9EF98E02446CF6D0095A3AE /* Scroll.swift */,
 				B9EF98E12446CF6D0095A3AE /* ScrollDetector.swift */,
 				B9EF98E22446CF6D0095A3AE /* PositionScrollViewDelegate.swift */,
+				B9F393FD2446D55F00A79013 /* ScrollSetting.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B9F393FA2446D09700A79013 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +248,10 @@
 				B9EF98AF2446CDC70095A3AE /* AppDelegate.swift in Sources */,
 				B9EF98B12446CDC70095A3AE /* SceneDelegate.swift in Sources */,
 				B9EF98DA2446CF450095A3AE /* InfinityScroll.swift in Sources */,
+				B9F393FE2446D55F00A79013 /* ScrollSetting.swift in Sources */,
 				B9EF98D72446CF450095A3AE /* InfinityScrollState.swift in Sources */,
 				B9EF98E32446CF6D0095A3AE /* ScrollState.swift in Sources */,
+				B9F393FC2446D0B100A79013 /* HorizontalScrollView.swift in Sources */,
 				B9EF98D92446CF450095A3AE /* ItemGeneratable.swift in Sources */,
 				B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */,
 				B9EF98E62446CF6D0095A3AE /* ScrollDetector.swift in Sources */,
