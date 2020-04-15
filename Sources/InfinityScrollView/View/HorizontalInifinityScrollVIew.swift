@@ -49,7 +49,7 @@ struct InfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
         let scrollState = HorizontalInfinityScrollState(
             pageSize: CGSize(width: 200, height: 200),
-            horizontalScroll: InfinityScroll(
+            scroll: InfinityScroll(
                 scrollSetting: ScrollSetting(
                     pageCount: 5,
                     // -2〜2の0ページ目

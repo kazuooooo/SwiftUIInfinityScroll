@@ -38,11 +38,11 @@ internal class HorizontalInfinityScrollState: ScrollState {
     
     init(
         pageSize: CGSize,
-        horizontalScroll: Scroll
+        scroll: Scroll
     ){
         super.init(
             pageSize: pageSize,
-            horizontalScroll: horizontalScroll
+            horizontalScroll: scroll
         )
     }
 }
@@ -54,11 +54,11 @@ internal class VerticalInfinityScrollState: ScrollState {
     
     init(
         pageSize: CGSize,
-        verticalScroll: Scroll
+        scroll: Scroll
     ){
         super.init(
             pageSize: pageSize,
-            verticalScroll: verticalScroll
+            verticalScroll: scroll
         )
     }
 }
