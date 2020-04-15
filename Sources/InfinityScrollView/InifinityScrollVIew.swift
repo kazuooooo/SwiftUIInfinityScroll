@@ -10,26 +10,9 @@ import SwiftUI
 import UIKit
 
 struct InfinityScrollView<G: ItemGeneratable> : View {
-    @ObservedObject var scrollState = InfinityScrollState(
-        pageSize: CGSize(width: 200, height: 200),
-        horizontalScroll: InfinityScroll(
-            scrollSetting: ScrollSetting(
-                pageCount: 5,
-                // -2〜2の0ページ目
-                initialPage: 2,
-                pageSize: 200,
-                afterMoveType: .unit
-            )
-        )
-    )
+    @ObservedObject var scrollState: InfinityScrollState
     
     var generator: G
-    
-    init(
-        generator: G
-    ){
-        self.generator = generator
-    }
     
     
     var body: some View {
@@ -78,6 +61,21 @@ struct TestViewItem: InfinityScrollViewItemable {
 
 struct InfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        return InfinityScrollView(generator: TestViewGenerator())
+        let scrollState = InfinityScrollState(
+            pageSize: CGSize(width: 200, height: 200),
+            horizontalScroll: InfinityScroll(
+                scrollSetting: ScrollSetting(
+                    pageCount: 5,
+                    // -2〜2の0ページ目
+                    initialPage: 2,
+                    pageSize: 200,
+                    afterMoveType: .unit
+                )
+            )
+        )
+        return InfinityScrollView(
+            scrollState: scrollState,
+            generator: TestViewGenerator()
+        )
     }
 }
