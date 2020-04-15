@@ -24,7 +24,7 @@ struct HorizontalScrollView: View {
     var body: some View {
         let scroll = scrollState.infinityHorizontalScroll!
         return VStack {
-            InfinityScrollView(
+            HorizontalInfinityScrollView(
                 generator: TestViewGenerator()
             ).environmentObject(scrollState)
             VStack {

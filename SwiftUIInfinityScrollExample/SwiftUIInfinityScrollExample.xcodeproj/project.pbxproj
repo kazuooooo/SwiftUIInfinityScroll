@@ -14,7 +14,7 @@
 		B9EF98B82446CDC80095A3AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EF98B72446CDC80095A3AE /* Preview Assets.xcassets */; };
 		B9EF98BB2446CDC80095A3AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EF98B92446CDC80095A3AE /* LaunchScreen.storyboard */; };
 		B9EF98D72446CF450095A3AE /* InfinityScrollState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98D22446CF450095A3AE /* InfinityScrollState.swift */; };
-		B9EF98D82446CF450095A3AE /* InifinityScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98D32446CF450095A3AE /* InifinityScrollVIew.swift */; };
+		B9EF98D82446CF450095A3AE /* HorizontalInifinityScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98D32446CF450095A3AE /* HorizontalInifinityScrollVIew.swift */; };
 		B9EF98D92446CF450095A3AE /* ItemGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98D52446CF450095A3AE /* ItemGeneratable.swift */; };
 		B9EF98DA2446CF450095A3AE /* InfinityScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98D62446CF450095A3AE /* InfinityScroll.swift */; };
 		B9EF98E32446CF6D0095A3AE /* ScrollState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98DD2446CF6D0095A3AE /* ScrollState.swift */; };
@@ -36,7 +36,7 @@
 		B9EF98BA2446CDC80095A3AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9EF98BC2446CDC80095A3AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9EF98D22446CF450095A3AE /* InfinityScrollState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfinityScrollState.swift; sourceTree = "<group>"; };
-		B9EF98D32446CF450095A3AE /* InifinityScrollVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InifinityScrollVIew.swift; sourceTree = "<group>"; };
+		B9EF98D32446CF450095A3AE /* HorizontalInifinityScrollVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalInifinityScrollVIew.swift; sourceTree = "<group>"; };
 		B9EF98D52446CF450095A3AE /* ItemGeneratable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemGeneratable.swift; sourceTree = "<group>"; };
 		B9EF98D62446CF450095A3AE /* InfinityScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfinityScroll.swift; sourceTree = "<group>"; };
 		B9EF98DD2446CF6D0095A3AE /* ScrollState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollState.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		B9EF98D02446CF450095A3AE /* InfinityScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				B9EF98D32446CF450095A3AE /* InifinityScrollVIew.swift */,
+				B9F394012446EFA900A79013 /* View */,
 				B9EF98D12446CF450095A3AE /* VIewModel */,
 				B9EF98D42446CF450095A3AE /* Model */,
 			);
@@ -172,6 +172,14 @@
 				B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		B9F394012446EFA900A79013 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9EF98D32446CF450095A3AE /* HorizontalInifinityScrollVIew.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +264,7 @@
 				B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */,
 				B9EF98E62446CF6D0095A3AE /* ScrollDetector.swift in Sources */,
 				B9EF98E42446CF6D0095A3AE /* PositionScrollView.swift in Sources */,
-				B9EF98D82446CF450095A3AE /* InifinityScrollVIew.swift in Sources */,
+				B9EF98D82446CF450095A3AE /* HorizontalInifinityScrollVIew.swift in Sources */,
 				B9EF98E52446CF6D0095A3AE /* Scroll.swift in Sources */,
 				B9EF98B32446CDC70095A3AE /* ContentView.swift in Sources */,
 			);
