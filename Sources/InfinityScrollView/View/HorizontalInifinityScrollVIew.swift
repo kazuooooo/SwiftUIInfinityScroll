@@ -10,20 +10,20 @@ import SwiftUI
 import UIKit
 
 struct HorizontalInfinityScrollView<G: ItemGeneratable> : View {
-    @EnvironmentObject var scrollState: InfinityScrollState
+    @EnvironmentObject var scrollState: HorizontalInfinityScrollState
     
     var generator: G
     
     
     var body: some View {
-        let scroll = self.scrollState.horizontalScroll as! InfinityScroll
+        let scroll = self.scrollState.infinityHorizontalScroll
         return PositionScrollView(scrollState: self.scrollState) {
-                    HStack(spacing: 0) {
-                        ForEach( scroll.renderPages, id: \.self) {page in
-                            self.generator.generateItem(page: page)
-                        }
-                    }
+            HStack(spacing: 0) {
+                ForEach( scroll.renderPages, id: \.self) {page in
+                    self.generator.generateItem(page: page)
                 }
+            }
+        }
     }
 }
 
@@ -47,7 +47,7 @@ struct TestViewItem: InfinityScrollViewItemable {
 
 struct InfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        let scrollState = InfinityScrollState(
+        let scrollState = HorizontalInfinityScrollState(
             pageSize: CGSize(width: 200, height: 200),
             horizontalScroll: InfinityScroll(
                 scrollSetting: ScrollSetting(

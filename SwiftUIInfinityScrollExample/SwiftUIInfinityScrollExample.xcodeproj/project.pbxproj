@@ -24,6 +24,8 @@
 		B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EF98E22446CF6D0095A3AE /* PositionScrollViewDelegate.swift */; };
 		B9F393FC2446D0B100A79013 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */; };
 		B9F393FE2446D55F00A79013 /* ScrollSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F393FD2446D55F00A79013 /* ScrollSetting.swift */; };
+		B9F394032446EFEC00A79013 /* VerticalInfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */; };
+		B9F394052446F2AF00A79013 /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F394042446F2AF00A79013 /* VerticalScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B9EF98E22446CF6D0095A3AE /* PositionScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionScrollViewDelegate.swift; sourceTree = "<group>"; };
 		B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		B9F393FD2446D55F00A79013 /* ScrollSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSetting.swift; sourceTree = "<group>"; };
+		B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalInfinityScrollView.swift; sourceTree = "<group>"; };
+		B9F394042446F2AF00A79013 /* VerticalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */,
+				B9F394042446F2AF00A79013 /* VerticalScrollView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B9EF98D32446CF450095A3AE /* HorizontalInifinityScrollVIew.swift */,
+				B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,11 +266,13 @@
 				B9EF98D72446CF450095A3AE /* InfinityScrollState.swift in Sources */,
 				B9EF98E32446CF6D0095A3AE /* ScrollState.swift in Sources */,
 				B9F393FC2446D0B100A79013 /* HorizontalScrollView.swift in Sources */,
+				B9F394052446F2AF00A79013 /* VerticalScrollView.swift in Sources */,
 				B9EF98D92446CF450095A3AE /* ItemGeneratable.swift in Sources */,
 				B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */,
 				B9EF98E62446CF6D0095A3AE /* ScrollDetector.swift in Sources */,
 				B9EF98E42446CF6D0095A3AE /* PositionScrollView.swift in Sources */,
 				B9EF98D82446CF450095A3AE /* HorizontalInifinityScrollVIew.swift in Sources */,
+				B9F394032446EFEC00A79013 /* VerticalInfinityScrollView.swift in Sources */,
 				B9EF98E52446CF6D0095A3AE /* Scroll.swift in Sources */,
 				B9EF98B32446CDC70095A3AE /* ContentView.swift in Sources */,
 			);

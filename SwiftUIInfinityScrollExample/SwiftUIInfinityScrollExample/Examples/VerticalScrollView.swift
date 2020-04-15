@@ -1,5 +1,5 @@
 //
-//  HorizontalScrollView.swift
+//  VerticalScrollView.swift
 //  SwiftUIInfinityScrollExample
 //
 //  Created by 松本和也 on 2020/04/15.
@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct HorizontalScrollView: View {
-    @ObservedObject var scrollState = HorizontalInfinityScrollState(
+struct VerticalScrollView: View {
+    @ObservedObject var scrollState = VerticalInfinityScrollState(
         pageSize: CGSize(width: 200, height: 200),
-        horizontalScroll: InfinityScroll(
+        verticalScroll: InfinityScroll(
             scrollSetting: ScrollSetting(
                 pageCount: 5,
                 // -2〜2の0ページ目
@@ -22,9 +22,9 @@ struct HorizontalScrollView: View {
         )
     )
     var body: some View {
-        let scroll = scrollState.infinityHorizontalScroll
+        let scroll = scrollState.infinityVerticalScroll
         return VStack {
-            HorizontalInfinityScrollView(
+            VerticalInfinityScrollView(
                 generator: TestViewGenerator()
             ).environmentObject(scrollState)
             VStack {
@@ -34,8 +34,8 @@ struct HorizontalScrollView: View {
     }
 }
 
-struct HorizontalScrollView_Previews: PreviewProvider {
+struct VerticalScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        return HorizontalScrollView()
+        return VerticalScrollView()
     }
 }
