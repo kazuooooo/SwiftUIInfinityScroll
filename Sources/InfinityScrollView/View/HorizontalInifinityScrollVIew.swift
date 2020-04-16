@@ -27,7 +27,7 @@ struct HorizontalInfinityScrollView<G: ItemGeneratable> : View {
 }
 
 
-class TestViewGenerator: ItemGeneratable {
+class RectGenerator: ItemGeneratable {
     typealias Item = TestViewItem
     func generateItem(page: Int) -> TestViewItem {
         return TestViewItem(page: page)
@@ -59,7 +59,7 @@ struct InfinityScrollView_Previews: PreviewProvider {
             )
         )
         return HorizontalInfinityScrollView(
-            generator: TestViewGenerator()
+            generator: RectGenerator()
         ).environmentObject(scrollState)
     }
 }

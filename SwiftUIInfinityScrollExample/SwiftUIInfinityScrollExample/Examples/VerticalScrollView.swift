@@ -25,7 +25,7 @@ struct VerticalScrollView: View {
         let scroll = scrollState.infinityVerticalScroll
         return VStack {
             VerticalInfinityScrollView(
-                generator: TestViewGenerator()
+                generator: RectGenerator()
             ).environmentObject(scrollState)
             VStack {
                 Text("page: \(scroll.pageInInfinity)")

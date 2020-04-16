@@ -26,7 +26,8 @@
 		B9F393FE2446D55F00A79013 /* ScrollSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F393FD2446D55F00A79013 /* ScrollSetting.swift */; };
 		B9F394032446EFEC00A79013 /* VerticalInfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */; };
 		B9F394052446F2AF00A79013 /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F394042446F2AF00A79013 /* VerticalScrollView.swift */; };
-		B9F3940D2447F16100A79013 /* SyncScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3940C2447F16100A79013 /* SyncScrollView.swift */; };
+		B9F39411244820A500A79013 /* DimentionalInfinityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F39410244820A500A79013 /* DimentionalInfinityScrollView.swift */; };
+		B9F394132448234A00A79013 /* DimentionalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F394122448234900A79013 /* DimentionalScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +52,8 @@
 		B9F393FD2446D55F00A79013 /* ScrollSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSetting.swift; sourceTree = "<group>"; };
 		B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalInfinityScrollView.swift; sourceTree = "<group>"; };
 		B9F394042446F2AF00A79013 /* VerticalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
-		B9F3940C2447F16100A79013 /* SyncScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScrollView.swift; sourceTree = "<group>"; };
+		B9F39410244820A500A79013 /* DimentionalInfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimentionalInfinityScrollView.swift; sourceTree = "<group>"; };
+		B9F394122448234900A79013 /* DimentionalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimentionalScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,7 @@
 			children = (
 				B9F393FB2446D0B100A79013 /* HorizontalScrollView.swift */,
 				B9F394042446F2AF00A79013 /* VerticalScrollView.swift */,
-				B9F3940C2447F16100A79013 /* SyncScrollView.swift */,
+				B9F394122448234900A79013 /* DimentionalScrollView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 			children = (
 				B9EF98D32446CF450095A3AE /* HorizontalInifinityScrollVIew.swift */,
 				B9F394022446EFEC00A79013 /* VerticalInfinityScrollView.swift */,
+				B9F39410244820A500A79013 /* DimentionalInfinityScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,7 +267,6 @@
 			files = (
 				B9EF98AF2446CDC70095A3AE /* AppDelegate.swift in Sources */,
 				B9EF98B12446CDC70095A3AE /* SceneDelegate.swift in Sources */,
-				B9F3940D2447F16100A79013 /* SyncScrollView.swift in Sources */,
 				B9EF98DA2446CF450095A3AE /* InfinityScroll.swift in Sources */,
 				B9F393FE2446D55F00A79013 /* ScrollSetting.swift in Sources */,
 				B9EF98D72446CF450095A3AE /* InfinityScrollState.swift in Sources */,
@@ -274,6 +276,8 @@
 				B9EF98D92446CF450095A3AE /* ItemGeneratable.swift in Sources */,
 				B9EF98E72446CF6D0095A3AE /* PositionScrollViewDelegate.swift in Sources */,
 				B9EF98E62446CF6D0095A3AE /* ScrollDetector.swift in Sources */,
+				B9F39411244820A500A79013 /* DimentionalInfinityScrollView.swift in Sources */,
+				B9F394132448234A00A79013 /* DimentionalScrollView.swift in Sources */,
 				B9EF98E42446CF6D0095A3AE /* PositionScrollView.swift in Sources */,
 				B9EF98D82446CF450095A3AE /* HorizontalInifinityScrollVIew.swift in Sources */,
 				B9F394032446EFEC00A79013 /* VerticalInfinityScrollView.swift in Sources */,
