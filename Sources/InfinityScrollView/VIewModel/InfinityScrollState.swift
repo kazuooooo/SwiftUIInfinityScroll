@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-internal class DimentionalInfinityScrollState: ScrollState {
+internal class InfinityScrollState: ScrollState {
     /// Dimentional
     var infinityHorizontalScroll: InfinityScroll {
         self.horizontalScroll as! InfinityScroll
@@ -29,36 +29,24 @@ internal class DimentionalInfinityScrollState: ScrollState {
             verticalScroll: verticalScroll
         )
     }
-}
-
-internal class HorizontalInfinityScrollState: ScrollState {
-    var infinityHorizontalScroll: InfinityScroll {
-        self.horizontalScroll as! InfinityScroll
-    }
     
     init(
         pageSize: CGSize,
-        scroll: Scroll
+        horizontalScroll: Scroll
     ){
         super.init(
             pageSize: pageSize,
-            horizontalScroll: scroll
+            horizontalScroll: horizontalScroll
         )
     }
-}
-
-internal class VerticalInfinityScrollState: ScrollState {
-    var infinityVerticalScroll: InfinityScroll {
-        self.verticalScroll as! InfinityScroll
-    }
     
     init(
         pageSize: CGSize,
-        scroll: Scroll
+        verticalScroll: Scroll
     ){
         super.init(
             pageSize: pageSize,
-            verticalScroll: scroll
+            verticalScroll: verticalScroll
         )
     }
 }

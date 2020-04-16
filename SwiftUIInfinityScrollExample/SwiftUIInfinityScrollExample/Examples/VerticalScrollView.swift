@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct VerticalScrollView: View {
-    @ObservedObject var scrollState = VerticalInfinityScrollState(
+    @ObservedObject var scrollState = InfinityScrollState(
         pageSize: CGSize(width: 200, height: 200),
-        scroll: InfinityScroll(
+        verticalScroll: InfinityScroll(
             scrollSetting: ScrollSetting(
                 pageCount: 5,
                 // -2〜2の0ページ目

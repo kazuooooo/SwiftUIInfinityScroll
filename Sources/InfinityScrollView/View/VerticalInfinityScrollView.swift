@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct VerticalInfinityScrollView<G: ItemGeneratable> : View {
-    @EnvironmentObject var scrollState: VerticalInfinityScrollState
+    @EnvironmentObject var scrollState: InfinityScrollState
     
     var generator: G
     
@@ -30,9 +30,9 @@ struct VerticalInfinityScrollView<G: ItemGeneratable> : View {
 
 struct VerticalInfinityScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        let scrollState = VerticalInfinityScrollState(
+        let scrollState = InfinityScrollState(
             pageSize: CGSize(width: 200, height: 200),
-            scroll: InfinityScroll(
+            verticalScroll: InfinityScroll(
                 scrollSetting: ScrollSetting(
                     pageCount: 5,
                     // -2〜2の0ページ目
